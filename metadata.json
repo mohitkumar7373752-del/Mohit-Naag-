@@ -1,0 +1,8 @@
+{
+  "name": "Remix StudyPulse - AI Study Notes, Flashcards & Quizzes",
+  "description": "Transform study notes and topics into AI-generated smart flashcards and interactive multiple-choice quizzes for effective self-testing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

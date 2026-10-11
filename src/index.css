@@ -1,0 +1,437 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #090d16;
+    color: #e2e8f0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    selection-background-color: #4f46e5;
+    selection-color: #ffffff;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Custom soothing scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
+
+/* ==========================================================================
+   THEME 1: LIGHT MODE (Clean, soothing student daylight palette)
+   ========================================================================== */
+
+[data-theme="light"],
+.theme-light {
+  color-scheme: light;
+}
+
+[data-theme="light"] body,
+.theme-light body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Page canvas & containers */
+[data-theme="light"] .min-h-screen,
+[data-theme="light"] main {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Surface backgrounds */
+[data-theme="light"] .bg-slate-950 {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .bg-slate-900 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .bg-slate-900\/95,
+[data-theme="light"] .bg-slate-900\/90,
+[data-theme="light"] .bg-slate-900\/80,
+[data-theme="light"] .bg-slate-900\/60 {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+}
+
+[data-theme="light"] .bg-slate-950\/85,
+[data-theme="light"] .bg-slate-950\/80,
+[data-theme="light"] .bg-slate-950\/70,
+[data-theme="light"] .bg-slate-950\/60,
+[data-theme="light"] .bg-slate-950\/50,
+[data-theme="light"] .bg-slate-950\/40 {
+  background-color: #f8fafc !important;
+}
+
+[data-theme="light"] .bg-slate-800,
+[data-theme="light"] .bg-slate-800\/80,
+[data-theme="light"] .bg-slate-800\/50,
+[data-theme="light"] .bg-slate-800\/40 {
+  background-color: #e2e8f0 !important;
+  color: #1e293b !important;
+}
+
+/* Borders */
+[data-theme="light"] .border-slate-800,
+[data-theme="light"] .border-slate-800\/80,
+[data-theme="light"] .border-slate-800\/90,
+[data-theme="light"] .border-slate-700,
+[data-theme="light"] .border-slate-700\/80,
+[data-theme="light"] .border-slate-700\/60 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Typography in light mode */
+[data-theme="light"] .text-white,
+[data-theme="light"] .text-slate-100 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .text-slate-200,
+[data-theme="light"] .text-slate-300 {
+  color: #1e293b !important;
+}
+
+[data-theme="light"] .text-slate-400 {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .text-slate-500 {
+  color: #64748b !important;
+}
+
+/* Light mode category/subject badges */
+[data-theme="light"] .text-indigo-300,
+[data-theme="light"] .text-indigo-200 {
+  color: #4338ca !important;
+}
+
+[data-theme="light"] .text-emerald-300 {
+  color: #047857 !important;
+}
+
+[data-theme="light"] .text-amber-300 {
+  color: #b45309 !important;
+}
+
+[data-theme="light"] .text-teal-300 {
+  color: #0f766e !important;
+}
+
+[data-theme="light"] .text-cyan-300 {
+  color: #0e7490 !important;
+}
+
+[data-theme="light"] .text-violet-300 {
+  color: #6d28d9 !important;
+}
+
+[data-theme="light"] .text-sky-300 {
+  color: #0369a1 !important;
+}
+
+[data-theme="light"] .text-rose-300 {
+  color: #be123c !important;
+}
+
+/* Light mode inputs & forms */
+[data-theme="light"] input,
+[data-theme="light"] select,
+[data-theme="light"] textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Light mode flashcards */
+[data-theme="light"] .backface-hidden {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="light"] .bg-indigo-600 {
+  background-color: #4f46e5 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .bg-indigo-600:hover {
+  background-color: #4338ca !important;
+}
+
+[data-theme="light"] .theme-switcher-container {
+  background-color: #e2e8f0 !important;
+  border-color: #cbd5e1 !important;
+}
+
+[data-theme="light"] .theme-switcher-active {
+  background-color: #4f46e5 !important;
+  color: #ffffff !important;
+}
+
+/* Light mode review callouts */
+[data-theme="light"] .bg-emerald-950\/10 {
+  background-color: rgba(16, 185, 129, 0.08) !important;
+}
+
+[data-theme="light"] .border-emerald-500\/30,
+[data-theme="light"] .border-emerald-500\/25 {
+  border-color: rgba(16, 185, 129, 0.4) !important;
+}
+
+[data-theme="light"] .bg-rose-950\/10 {
+  background-color: rgba(244, 63, 94, 0.08) !important;
+}
+
+[data-theme="light"] .border-rose-500\/30,
+[data-theme="light"] .border-rose-500\/25 {
+  border-color: rgba(244, 63, 94, 0.4) !important;
+}
+
+/* Light mode streak tracker */
+[data-theme="light"] .bg-amber-500\/10 {
+  background-color: #fef3c7 !important;
+}
+
+[data-theme="light"] .border-amber-500\/30,
+[data-theme="light"] .border-amber-500\/40,
+[data-theme="light"] .border-amber-500\/50 {
+  border-color: #fcd34d !important;
+}
+
+[data-theme="light"] .text-amber-200,
+[data-theme="light"] .text-amber-300 {
+  color: #92400e !important;
+}
+
+[data-theme="light"] .text-amber-400 {
+  color: #b45309 !important;
+}
+
+/* ==========================================================================
+   THEME 2: HIGH CONTRAST MODE (WCAG AAA Accessibility)
+   Deep pitch black, pure white text, 2px borders, vibrant accessibility yellow
+   ========================================================================== */
+
+[data-theme="contrast"],
+.theme-contrast {
+  color-scheme: dark;
+}
+
+[data-theme="contrast"] body,
+.theme-contrast body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="contrast"] .min-h-screen,
+[data-theme="contrast"] main {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Surface backgrounds */
+[data-theme="contrast"] .bg-slate-950,
+[data-theme="contrast"] .bg-slate-900,
+[data-theme="contrast"] .bg-slate-900\/95,
+[data-theme="contrast"] .bg-slate-900\/90,
+[data-theme="contrast"] .bg-slate-900\/80,
+[data-theme="contrast"] .bg-slate-900\/60,
+[data-theme="contrast"] .bg-slate-950\/85,
+[data-theme="contrast"] .bg-slate-950\/80,
+[data-theme="contrast"] .bg-slate-950\/70,
+[data-theme="contrast"] .bg-slate-950\/60,
+[data-theme="contrast"] .bg-slate-950\/50,
+[data-theme="contrast"] .bg-slate-950\/40 {
+  background-color: #0a0a0a !important;
+}
+
+[data-theme="contrast"] .bg-slate-800,
+[data-theme="contrast"] .bg-slate-800\/80,
+[data-theme="contrast"] .bg-slate-800\/50 {
+  background-color: #171717 !important;
+}
+
+/* High contrast sharp borders (2px pure white) */
+[data-theme="contrast"] .border-slate-800,
+[data-theme="contrast"] .border-slate-800\/80,
+[data-theme="contrast"] .border-slate-800\/90,
+[data-theme="contrast"] .border-slate-700,
+[data-theme="contrast"] .border-slate-700\/80,
+[data-theme="contrast"] .border-slate-700\/60 {
+  border-color: #ffffff !important;
+  border-width: 1.5px !important;
+}
+
+/* High contrast typography (100% white for 21:1 contrast) */
+[data-theme="contrast"] .text-white,
+[data-theme="contrast"] .text-slate-100,
+[data-theme="contrast"] .text-slate-200,
+[data-theme="contrast"] .text-slate-300,
+[data-theme="contrast"] .text-slate-400,
+[data-theme="contrast"] .text-slate-500 {
+  color: #ffffff !important;
+}
+
+/* High contrast accents in vibrant yellow (#facc15) */
+[data-theme="contrast"] .text-indigo-200,
+[data-theme="contrast"] .text-indigo-300,
+[data-theme="contrast"] .text-indigo-400,
+[data-theme="contrast"] .text-amber-200,
+[data-theme="contrast"] .text-amber-300,
+[data-theme="contrast"] .text-amber-400,
+[data-theme="contrast"] .text-teal-300,
+[data-theme="contrast"] .text-cyan-300,
+[data-theme="contrast"] .text-violet-300,
+[data-theme="contrast"] .text-sky-300 {
+  color: #fde047 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="contrast"] .bg-indigo-600 {
+  background-color: #facc15 !important;
+  color: #000000 !important;
+  border: 2px solid #ffffff !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="contrast"] .bg-indigo-600:hover {
+  background-color: #fde047 !important;
+  color: #000000 !important;
+}
+
+[data-theme="contrast"] .bg-emerald-600 {
+  background-color: #4ade80 !important;
+  color: #000000 !important;
+  border: 2px solid #ffffff !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="contrast"] .text-emerald-300,
+[data-theme="contrast"] .text-emerald-400 {
+  color: #4ade80 !important;
+  font-weight: 700 !important;
+}
+
+/* High contrast inputs and radio buttons */
+[data-theme="contrast"] input,
+[data-theme="contrast"] select,
+[data-theme="contrast"] textarea {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+[data-theme="contrast"] input[type="radio"] {
+  accent-color: #facc15 !important;
+  outline: 2px solid #ffffff !important;
+}
+
+[data-theme="contrast"] input::placeholder,
+[data-theme="contrast"] textarea::placeholder {
+  color: #d4d4d4 !important;
+}
+
+/* High contrast flashcards */
+[data-theme="contrast"] .backface-hidden {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+[data-theme="contrast"] .theme-switcher-container {
+  background-color: #000000 !important;
+  border: 2px solid #ffffff !important;
+}
+
+[data-theme="contrast"] .theme-switcher-active {
+  background-color: #facc15 !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff !important;
+  font-weight: 900 !important;
+}
+
+/* Visible focus rings for accessibility */
+[data-theme="contrast"] *:focus-visible {
+  outline: 3px solid #facc15 !important;
+  outline-offset: 3px !important;
+}
+
+/* High contrast streak tracker */
+[data-theme="contrast"] .bg-amber-500\/10 {
+  background-color: #000000 !important;
+  border: 2px solid #facc15 !important;
+}
+
+[data-theme="contrast"] .text-amber-200,
+[data-theme="contrast"] .text-amber-300,
+[data-theme="contrast"] .text-amber-400 {
+  color: #facc15 !important;
+  font-weight: bold !important;
+}
+
+[data-theme="contrast"] .fill-amber-500,
+[data-theme="contrast"] .fill-amber-400 {
+  fill: #facc15 !important;
+}
+
+/* High contrast modal styling */
+[data-theme="contrast"] .fixed.inset-0 .bg-slate-900 {
+  background-color: #000000 !important;
+  border: 2px solid #ffffff !important;
+}
+
+[data-theme="contrast"] .fixed.inset-0 .bg-slate-950,
+[data-theme="contrast"] .fixed.inset-0 .bg-slate-950\/60,
+[data-theme="contrast"] .fixed.inset-0 .bg-slate-950\/80 {
+  background-color: #0a0a0a !important;
+  border-color: #ffffff !important;
+}
+
+[data-theme="contrast"] .fixed.inset-0 .border-slate-800,
+[data-theme="contrast"] .fixed.inset-0 .border-slate-700 {
+  border-color: #ffffff !important;
+}
+
